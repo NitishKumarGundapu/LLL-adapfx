@@ -1,0 +1,51 @@
+nohup: ignoring input
+Available number of GPU = 1 < n_gpus = 8
+Continue training with 1 GPUs
+2022-05-15 14:43:56,101 - 0:00:11 - 0.0s - INFO - __main__ - args = Namespace(REG_TYPE_KEYS=['mas', 'ewc'], adam_epsilon=0.0001, add_task_tokens=False, data_dir='data', debug=False, decay_style='linear', device_ids=[6], dynamic_epochs=False, fp32=True, gen_lm_sample_percentage=0.0, learning_rate=6.25e-05, lm_lambda=0.0, logging_steps=1000, lr_schedule='warmup_linear', max_grad_norm=1, max_len=1024, max_n_epochs=9, memory_sizes=[32510.0], min_batch_size=4, min_n_steps=1500, model_dir_root='models/gpt2/lll/sst_srl_woz.en_0.0', model_name='gpt2', n_gpus=1, n_train_epochs={'sst': 5, 'srl': 5, 'woz.en': 5}, n_warmup_ratio=0.005, n_workers=75, qp_margin=0.5, real_sample=False, reg_lambda=1.0, seed=42, seq_train_type='lll', skip_tasks=None, tasks=['sst', 'srl', 'woz.en'], temperature_lm=1.0, temperature_qa=1.0, test_batch_size=[11378], tokens_weight=5, top_k_lm=20, top_k_qa=20, top_p_lm=0.0, top_p_qa=0.0, train_batch_size=[11378], unbound=0, use_sep=False, weight_decay=0.01)
+2022-05-15 14:43:56,101 - 0:00:11 - 0.0s - INFO - __main__ - start to train { task: ['sst'], seq train type: lll }
+2022-05-15 14:43:56,102 - 0:00:11 - 0.0s - INFO - __main__ - extra training data size: 0
+2022-05-15 14:44:01,186 - 0:00:16 - 5.1s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+2022-05-15 14:44:05,704 - 0:00:21 - 4.5s - INFO - __main__ - len of train dataset: 6920 , max train batch size 4 , num of opt steps: 34600
+2022-05-15 14:45:57,801 - 0:02:13 - 112.1s - INFO - __main__ - progress 0.578 , lr 5.5E-05 , loss 2.059 , qa loss 2.059 , lm loss 0.000 , avg batch size 4.0
+2022-05-15 14:47:17,427 - 0:03:32 - 79.6s - INFO - __main__ - epoch 1/5 done , tot steps 1730 , lr 5.0E-05 , loss 1.29 , qa loss 1.29 , lm loss 0.00 , avg batch size 4.0
+2022-05-15 14:49:07,094 - 0:05:22 - 109.7s - INFO - __main__ - progress 1.578 , lr 4.3E-05 , loss 0.209 , qa loss 0.209 , lm loss 0.000 , avg batch size 4.0
+2022-05-15 14:50:27,927 - 0:06:43 - 80.8s - INFO - __main__ - epoch 2/5 done , tot steps 3460 , lr 3.8E-05 , loss 0.21 , qa loss 0.21 , lm loss 0.00 , avg batch size 4.0
+2022-05-15 14:52:17,990 - 0:08:33 - 110.1s - INFO - __main__ - progress 2.578 , lr 3.0E-05 , loss 0.186 , qa loss 0.186 , lm loss 0.000 , avg batch size 4.0
+2022-05-15 14:53:41,524 - 0:09:57 - 83.5s - INFO - __main__ - epoch 3/5 done , tot steps 5190 , lr 2.5E-05 , loss 0.18 , qa loss 0.18 , lm loss 0.00 , avg batch size 4.0
+2022-05-15 14:55:32,079 - 0:11:47 - 110.6s - INFO - __main__ - progress 3.578 , lr 1.8E-05 , loss 0.160 , qa loss 0.160 , lm loss 0.000 , avg batch size 4.0
+2022-05-15 14:56:51,511 - 0:13:07 - 79.4s - INFO - __main__ - epoch 4/5 done , tot steps 6920 , lr 1.3E-05 , loss 0.17 , qa loss 0.17 , lm loss 0.00 , avg batch size 4.0
+2022-05-15 14:58:41,476 - 0:14:56 - 110.0s - INFO - __main__ - progress 4.578 , lr 5.3E-06 , loss 0.159 , qa loss 0.159 , lm loss 0.000 , avg batch size 4.0
+2022-05-15 15:00:03,565 - 0:16:19 - 82.1s - INFO - __main__ - epoch 5/5 done , tot steps 8650 , lr 6.1E-08 , loss 0.16 , qa loss 0.16 , lm loss 0.00 , avg batch size 4.0
+2022-05-15 15:00:08,803 - 0:16:24 - 5.2s - INFO - __main__ - start to train { task: ['srl'], seq train type: lll }
+2022-05-15 15:00:13,859 - 0:16:29 - 5.1s - INFO - utils - extra data exists in models/gpt2/lll/sst_srl_woz.en_0.0/sst/lm.csv, read it!
+2022-05-15 15:00:13,860 - 0:16:29 - 0.0s - INFO - __main__ - extra training data size: 0
+2022-05-15 15:00:14,017 - 0:16:29 - 0.2s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+The current active adapter is Stack[sst]
+The task with which model is saved sst
+2022-05-15 15:00:18,200 - 0:16:33 - 4.2s - INFO - __main__ - len of train dataset: 6414 , max train batch size 4 , num of opt steps: 32070
+2022-05-15 15:02:58,614 - 0:19:14 - 160.4s - INFO - __main__ - progress 0.624 , lr 5.5E-05 , loss 2.915 , qa loss 2.915 , lm loss 0.000 , avg batch size 4.0
+2022-05-15 15:04:33,658 - 0:20:49 - 95.0s - INFO - __main__ - epoch 1/5 done , tot steps 1604 , lr 5.0E-05 , loss 2.17 , qa loss 2.17 , lm loss 0.00 , avg batch size 4.0
+2022-05-15 15:07:12,781 - 0:23:28 - 159.1s - INFO - __main__ - progress 1.624 , lr 4.2E-05 , loss 0.813 , qa loss 0.813 , lm loss 0.000 , avg batch size 4.0
+2022-05-15 15:08:48,856 - 0:25:04 - 96.1s - INFO - __main__ - epoch 2/5 done , tot steps 3208 , lr 3.8E-05 , loss 0.79 , qa loss 0.79 , lm loss 0.00 , avg batch size 4.0
+2022-05-15 15:11:28,611 - 0:27:44 - 159.8s - INFO - __main__ - progress 2.624 , lr 3.0E-05 , loss 0.690 , qa loss 0.690 , lm loss 0.000 , avg batch size 4.0
+2022-05-15 15:13:03,350 - 0:29:18 - 94.7s - INFO - __main__ - epoch 3/5 done , tot steps 4812 , lr 2.5E-05 , loss 0.69 , qa loss 0.69 , lm loss 0.00 , avg batch size 4.0
+2022-05-15 15:15:44,820 - 0:32:00 - 161.5s - INFO - __main__ - progress 3.624 , lr 1.7E-05 , loss 0.618 , qa loss 0.618 , lm loss 0.000 , avg batch size 4.0
+2022-05-15 15:17:23,155 - 0:33:38 - 98.3s - INFO - __main__ - epoch 4/5 done , tot steps 6416 , lr 1.3E-05 , loss 0.62 , qa loss 0.62 , lm loss 0.00 , avg batch size 4.0
+2022-05-15 15:20:03,661 - 0:36:19 - 160.5s - INFO - __main__ - progress 4.624 , lr 4.8E-06 , loss 0.582 , qa loss 0.582 , lm loss 0.000 , avg batch size 4.0
+2022-05-15 15:21:39,727 - 0:37:55 - 96.1s - INFO - __main__ - epoch 5/5 done , tot steps 8020 , lr 6.2E-08 , loss 0.59 , qa loss 0.59 , lm loss 0.00 , avg batch size 4.0
+2022-05-15 15:21:44,594 - 0:38:00 - 4.9s - INFO - __main__ - start to train { task: ['woz.en'], seq train type: lll }
+2022-05-15 15:21:49,705 - 0:38:05 - 5.1s - INFO - utils - writing extra data in models/gpt2/lll/sst_srl_woz.en_0.0/srl/lm.csv ...
+2022-05-15 15:21:49,706 - 0:38:05 - 0.0s - INFO - __main__ - extra training data size: 0
+2022-05-15 15:21:49,860 - 0:38:05 - 0.2s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+The current active adapter is Stack[sst]
+The task with which model is saved sst
+2022-05-15 15:21:54,559 - 0:38:10 - 4.7s - INFO - __main__ - len of train dataset: 2536 , max train batch size 4 , num of opt steps: 12680
+2022-05-15 15:23:07,599 - 0:39:23 - 73.0s - INFO - __main__ - epoch 1/5 done , tot steps 634 , lr 5.0E-05 , loss 3.08 , qa loss 3.08 , lm loss 0.00 , avg batch size 4.0
+2022-05-15 15:24:20,608 - 0:40:36 - 73.0s - INFO - __main__ - epoch 2/5 done , tot steps 1268 , lr 3.8E-05 , loss 0.42 , qa loss 0.42 , lm loss 0.00 , avg batch size 4.0
+2022-05-15 15:25:32,706 - 0:41:48 - 72.1s - INFO - __main__ - epoch 3/5 done , tot steps 1902 , lr 2.5E-05 , loss 0.32 , qa loss 0.32 , lm loss 0.00 , avg batch size 4.0
+2022-05-15 15:26:46,000 - 0:43:01 - 73.3s - INFO - __main__ - epoch 4/5 done , tot steps 2536 , lr 1.3E-05 , loss 0.27 , qa loss 0.27 , lm loss 0.00 , avg batch size 4.0
+2022-05-15 15:28:00,256 - 0:44:15 - 74.3s - INFO - __main__ - epoch 5/5 done , tot steps 3170 , lr 5.9E-08 , loss 0.24 , qa loss 0.24 , lm loss 0.00 , avg batch size 4.0
+The current active adapter is Stack[sst]
+The task with which model is saved sst
+Wall Execution time: 00:44:10
+CPU Execution time: 00:44:11

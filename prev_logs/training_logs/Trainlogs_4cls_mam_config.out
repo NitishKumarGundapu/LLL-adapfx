@@ -1,0 +1,1136 @@
+Available number of GPU = 7 < n_gpus = 8
+Continue training with 7 GPUs
+2022-09-12 11:14:51,562 - 0:00:10 - 0.0s - INFO - __main__ - args = Namespace(REG_TYPE_KEYS=['mas', 'ewc'], adam_epsilon=0.0001, add_task_tokens=False, data_dir='data', debug=False, decay_style='linear', device_ids=[1, 2, 6, 9, 10, 11, 13], dynamic_epochs=False, fp32=True, gen_lm_sample_percentage=0.0, learning_rate=6.25e-05, lm_lambda=0.0, logging_steps=1000, lr_schedule='warmup_linear', max_grad_norm=1, max_len=1024, max_n_epochs=9, memory_sizes=[24903.68, 34078.72, 34078.72, 34078.72, 34078.72, 34078.72, 34078.72], min_batch_size=4, min_n_steps=1500, model_dir_root='models/gpt2/lll/yahoo_sst_srl_woz.en_0.0', model_name='gpt2', n_gpus=7, n_train_epochs={'yahoo': 12, 'sst': 12, 'srl': 12, 'woz.en': 12}, n_warmup_ratio=0.005, n_workers=75, qp_margin=0.5, real_sample=False, reg_lambda=1.0, seed=42, seq_train_type='lll', skip_tasks=None, tasks=['yahoo', 'sst', 'srl', 'woz.en'], temperature_lm=1.0, temperature_qa=1.0, test_batch_size=[8716, 11927, 11927, 11927, 11927, 11927, 11927], tokens_weight=5, top_k_lm=20, top_k_qa=20, top_p_lm=0.0, top_p_qa=0.0, train_batch_size=[8716, 11927, 11927, 11927, 11927, 11927, 11927], unbound=0, use_sep=False, weight_decay=0.01)
+2022-09-12 11:14:51,563 - 0:00:10 - 0.0s - INFO - __main__ - start to train { task: ['yahoo'], seq train type: lll }
+2022-09-12 11:14:51,563 - 0:00:10 - 0.0s - INFO - __main__ - extra training data size: 0
+2022-09-12 11:14:55,857 - 0:00:14 - 4.3s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+Token indices sequence length is longer than the specified maximum sequence length for this model (1098 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1059 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1107 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1183 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1497 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1136 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1041 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1153 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1050 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1087 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1061 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1034 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1387 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1265 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1053 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1687 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1083 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1135 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1556 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1255 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1037 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1153 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1026 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1072 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1187 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1026 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1482 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1087 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1056 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1526 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1174 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1210 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1084 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1050 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1033 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1528 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1096 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1095 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1218 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1111 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1154 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1147 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1037 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1037 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1233 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1090 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1198 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1107 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1123 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1122 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1115 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1161 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1551 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1408 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1028 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1081 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1132 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1161 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1181 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1026 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1031 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1478 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1296 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1396 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1038 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1031 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1318 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1408 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1138 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1141 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1733 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1279 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1202 > 1024). Running this sequence through the model will result in indexing errors
+2022-09-12 11:15:15,092 - 0:00:34 - 19.2s - INFO - __main__ - len of train dataset: 115000 , max train batch size 76 , num of opt steps: 1380000
+/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Process Process-116:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-80:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-103:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-112:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-102:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-77:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-98:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-104:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-105:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-94:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-109:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-78:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-100:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-101:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-87:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-85:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-84:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-82:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-88:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-111:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-92:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-76:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-86:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-81:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-83:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-110:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-89:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-93:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-108:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-135:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-96:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-106:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-107:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-97:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-95:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-91:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-117:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-133:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-132:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-90:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-144:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-138:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-131:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-130:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-129:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-99:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-147:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-142:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-148:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-114:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-113:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-137:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-145:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-79:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-143:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-149:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-146:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-119:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-150:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-139:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-115:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-118:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt

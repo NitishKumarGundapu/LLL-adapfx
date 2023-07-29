@@ -1,0 +1,69 @@
+nohup: ignoring input
+2021-11-19 08:44:15,047 - 0:00:11 - 0.0s - INFO - __main__ - args = Namespace(REG_TYPE_KEYS=['mas', 'ewc'], adam_epsilon=0.0001, add_task_tokens=False, data_dir='data', debug=False, decay_style='linear', device_ids=[0, 1, 2, 3, 4, 5, 6, 7], dynamic_epochs=False, fp32=True, gen_lm_sample_percentage=0.2, learning_rate=6.25e-05, lm_lambda=0.25, logging_steps=1000, lr_schedule='warmup_linear', max_grad_norm=1, max_len=1024, max_n_epochs=9, memory_sizes=[23407.2, 33810.4, 33810.4, 33810.4, 33810.4, 33810.4, 33810.4, 33810.4], min_batch_size=4, min_n_steps=1500, model_dir_root='models/gpt2/finetune/sst_srl_woz.en', model_name='gpt2', n_gpus=8, n_train_epochs={'sst': 9, 'srl': 9, 'woz.en': 9}, n_warmup_ratio=0.005, n_workers=75, qp_margin=0.5, real_sample=False, reg_lambda=1.0, seed=42, seq_train_type='finetune', skip_tasks=None, tasks=['sst', 'srl', 'woz.en'], temperature_lm=1.0, temperature_qa=1.0, test_batch_size=[13576, 19610, 19610, 19610, 19610, 19610, 19610, 19610], tokens_weight=5, top_k_lm=20, top_k_qa=20, top_p_lm=0.0, top_p_qa=0.0, train_batch_size=[13576, 19610, 19610, 19610, 19610, 19610, 19610, 19610], unbound=0, use_sep=False, weight_decay=0.01)
+2021-11-19 08:44:15,048 - 0:00:11 - 0.0s - INFO - __main__ - start to train { task: ['sst'], seq train type: finetune }
+2021-11-19 08:44:15,048 - 0:00:11 - 0.0s - INFO - __main__ - extra training data size: 0
+2021-11-19 08:44:19,820 - 0:00:15 - 4.8s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+2021-11-19 08:44:23,233 - 0:00:19 - 3.4s - INFO - __main__ - len of train dataset: 6920 , max train batch size 4 , num of opt steps: 62280
+/home/ai20mtech14009/anaconda3/envs/LAMOL/lib/python3.7/site-packages/torch/nn/parallel/_functions.py:64: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+2021-11-19 08:45:35,009 - 0:01:31 - 71.8s - INFO - __main__ - progress 0.578 , lr 5.9E-05 , loss 1.777 , qa loss 1.777 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 08:46:26,012 - 0:02:22 - 51.0s - INFO - __main__ - epoch 1/9 done , tot steps 1730 , lr 5.6E-05 , loss 1.13 , qa loss 1.13 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 08:47:37,188 - 0:03:33 - 71.2s - INFO - __main__ - progress 1.578 , lr 5.2E-05 , loss 0.201 , qa loss 0.201 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 08:48:28,091 - 0:04:24 - 50.9s - INFO - __main__ - epoch 2/9 done , tot steps 3460 , lr 4.9E-05 , loss 0.20 , qa loss 0.20 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 08:49:37,771 - 0:05:33 - 69.7s - INFO - __main__ - progress 2.578 , lr 4.5E-05 , loss 0.194 , qa loss 0.194 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 08:50:28,510 - 0:06:24 - 50.7s - INFO - __main__ - epoch 3/9 done , tot steps 5190 , lr 4.2E-05 , loss 0.19 , qa loss 0.19 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 08:51:39,014 - 0:07:35 - 70.5s - INFO - __main__ - progress 3.578 , lr 3.8E-05 , loss 0.171 , qa loss 0.171 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 08:52:30,484 - 0:08:26 - 51.5s - INFO - __main__ - epoch 4/9 done , tot steps 6920 , lr 3.5E-05 , loss 0.17 , qa loss 0.17 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 08:53:40,882 - 0:09:37 - 70.4s - INFO - __main__ - progress 4.578 , lr 3.1E-05 , loss 0.152 , qa loss 0.152 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 08:54:32,234 - 0:10:28 - 51.4s - INFO - __main__ - epoch 5/9 done , tot steps 8650 , lr 2.8E-05 , loss 0.16 , qa loss 0.16 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 08:55:41,604 - 0:11:37 - 69.4s - INFO - __main__ - progress 5.578 , lr 2.4E-05 , loss 0.146 , qa loss 0.146 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 08:56:33,240 - 0:12:29 - 51.6s - INFO - __main__ - epoch 6/9 done , tot steps 10380 , lr 2.1E-05 , loss 0.15 , qa loss 0.15 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 08:57:43,729 - 0:13:39 - 70.5s - INFO - __main__ - progress 6.578 , lr 1.7E-05 , loss 0.139 , qa loss 0.139 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 08:58:35,029 - 0:14:31 - 51.3s - INFO - __main__ - epoch 7/9 done , tot steps 12110 , lr 1.4E-05 , loss 0.14 , qa loss 0.14 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 08:59:46,028 - 0:15:42 - 71.0s - INFO - __main__ - progress 7.578 , lr 9.9E-06 , loss 0.126 , qa loss 0.126 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 09:00:37,415 - 0:16:33 - 51.4s - INFO - __main__ - epoch 8/9 done , tot steps 13840 , lr 7.0E-06 , loss 0.13 , qa loss 0.13 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:01:47,712 - 0:17:43 - 70.3s - INFO - __main__ - progress 8.578 , lr 3.0E-06 , loss 0.120 , qa loss 0.120 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 09:02:39,150 - 0:18:35 - 51.4s - INFO - __main__ - epoch 9/9 done , tot steps 15570 , lr 3.4E-08 , loss 0.12 , qa loss 0.12 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:02:44,118 - 0:18:40 - 5.0s - INFO - __main__ - start to train { task: ['srl'], seq train type: finetune }
+2021-11-19 09:02:48,709 - 0:18:44 - 4.6s - INFO - __main__ - extra training data size: 0
+2021-11-19 09:02:48,811 - 0:18:44 - 0.1s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+The current active adapter is Stack[sst]
+The task with which model is saved sst
+2021-11-19 09:02:51,791 - 0:18:47 - 3.0s - INFO - __main__ - len of train dataset: 6414 , max train batch size 4 , num of opt steps: 57726
+Overwriting existing adapter 'sst'.
+2021-11-19 09:04:25,157 - 0:20:21 - 93.4s - INFO - __main__ - progress 0.624 , lr 5.8E-05 , loss 1.559 , qa loss 1.559 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 09:05:21,517 - 0:21:17 - 56.4s - INFO - __main__ - epoch 1/9 done , tot steps 1604 , lr 5.6E-05 , loss 1.31 , qa loss 1.31 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:06:56,242 - 0:22:52 - 94.7s - INFO - __main__ - progress 1.624 , lr 5.1E-05 , loss 0.778 , qa loss 0.778 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 09:07:53,317 - 0:23:49 - 57.1s - INFO - __main__ - epoch 2/9 done , tot steps 3208 , lr 4.9E-05 , loss 0.75 , qa loss 0.75 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:09:25,675 - 0:25:21 - 92.4s - INFO - __main__ - progress 2.624 , lr 4.4E-05 , loss 0.665 , qa loss 0.665 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 09:10:21,371 - 0:26:17 - 55.7s - INFO - __main__ - epoch 3/9 done , tot steps 4812 , lr 4.2E-05 , loss 0.66 , qa loss 0.66 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:11:53,697 - 0:27:49 - 92.3s - INFO - __main__ - progress 3.624 , lr 3.7E-05 , loss 0.609 , qa loss 0.609 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 09:12:50,535 - 0:28:46 - 56.8s - INFO - __main__ - epoch 4/9 done , tot steps 6416 , lr 3.5E-05 , loss 0.59 , qa loss 0.59 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:14:23,254 - 0:30:19 - 92.7s - INFO - __main__ - progress 4.624 , lr 3.0E-05 , loss 0.548 , qa loss 0.548 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 09:15:19,389 - 0:31:15 - 56.1s - INFO - __main__ - epoch 5/9 done , tot steps 8020 , lr 2.8E-05 , loss 0.55 , qa loss 0.55 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:16:53,000 - 0:32:49 - 93.6s - INFO - __main__ - progress 5.624 , lr 2.3E-05 , loss 0.518 , qa loss 0.518 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 09:17:50,486 - 0:33:46 - 57.5s - INFO - __main__ - epoch 6/9 done , tot steps 9624 , lr 2.1E-05 , loss 0.52 , qa loss 0.52 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:19:21,989 - 0:35:18 - 91.5s - INFO - __main__ - progress 6.624 , lr 1.7E-05 , loss 0.481 , qa loss 0.481 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 09:20:20,614 - 0:36:16 - 58.6s - INFO - __main__ - epoch 7/9 done , tot steps 11228 , lr 1.4E-05 , loss 0.49 , qa loss 0.49 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:21:52,603 - 0:37:48 - 92.0s - INFO - __main__ - progress 7.624 , lr 9.6E-06 , loss 0.472 , qa loss 0.472 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 09:22:49,453 - 0:38:45 - 56.9s - INFO - __main__ - epoch 8/9 done , tot steps 12832 , lr 7.0E-06 , loss 0.48 , qa loss 0.48 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:24:21,708 - 0:40:17 - 92.3s - INFO - __main__ - progress 8.624 , lr 2.6E-06 , loss 0.451 , qa loss 0.451 , lm loss 0.000 , avg batch size 4.0
+2021-11-19 09:25:18,593 - 0:41:14 - 56.9s - INFO - __main__ - epoch 9/9 done , tot steps 14436 , lr 3.5E-08 , loss 0.45 , qa loss 0.45 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:25:24,011 - 0:41:20 - 5.4s - INFO - __main__ - start to train { task: ['woz.en'], seq train type: finetune }
+2021-11-19 09:25:28,554 - 0:41:24 - 4.5s - INFO - __main__ - extra training data size: 0
+2021-11-19 09:25:28,630 - 0:41:24 - 0.1s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+The current active adapter is Stack[sst]
+The task with which model is saved sst
+2021-11-19 09:25:31,455 - 0:41:27 - 2.8s - INFO - __main__ - len of train dataset: 2536 , max train batch size 4 , num of opt steps: 22824
+Overwriting existing adapter 'sst'.
+2021-11-19 09:26:18,129 - 0:42:14 - 46.7s - INFO - __main__ - epoch 1/9 done , tot steps 634 , lr 5.6E-05 , loss 0.90 , qa loss 0.90 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:27:05,204 - 0:43:01 - 47.1s - INFO - __main__ - epoch 2/9 done , tot steps 1268 , lr 4.9E-05 , loss 0.31 , qa loss 0.31 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:27:52,365 - 0:43:48 - 47.2s - INFO - __main__ - epoch 3/9 done , tot steps 1902 , lr 4.2E-05 , loss 0.23 , qa loss 0.23 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:28:38,604 - 0:44:34 - 46.2s - INFO - __main__ - epoch 4/9 done , tot steps 2536 , lr 3.5E-05 , loss 0.20 , qa loss 0.20 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:29:24,477 - 0:45:20 - 45.9s - INFO - __main__ - epoch 5/9 done , tot steps 3170 , lr 2.8E-05 , loss 0.18 , qa loss 0.18 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:30:12,671 - 0:46:08 - 48.2s - INFO - __main__ - epoch 6/9 done , tot steps 3804 , lr 2.1E-05 , loss 0.17 , qa loss 0.17 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:31:00,558 - 0:46:56 - 47.9s - INFO - __main__ - epoch 7/9 done , tot steps 4438 , lr 1.4E-05 , loss 0.15 , qa loss 0.15 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:31:46,199 - 0:47:42 - 45.6s - INFO - __main__ - epoch 8/9 done , tot steps 5072 , lr 7.0E-06 , loss 0.15 , qa loss 0.15 , lm loss 0.00 , avg batch size 4.0
+2021-11-19 09:32:31,967 - 0:48:28 - 45.8s - INFO - __main__ - epoch 9/9 done , tot steps 5706 , lr 3.3E-08 , loss 0.14 , qa loss 0.14 , lm loss 0.00 , avg batch size 4.0
+The current active adapter is Stack[sst]
+The task with which model is saved sst

@@ -1,0 +1,50 @@
+Available number of GPU = 5 < n_gpus = 8
+Continue training with 5 GPUs
+Traceback (most recent call last):
+  File "train_experiment_adapter_from_scratch_mam_config.py", line 13, in <module>
+    from utils import *
+  File "/raid/cs21mtech11006/Lamol_with_adapter_final/utils.py", line 17, in <module>
+    from settings import args, TASK_DICT, SPECIAL_TOKENS, SPECIAL_TOKEN_IDS, FILL_VAL
+  File "/raid/cs21mtech11006/Lamol_with_adapter_final/settings.py", line 183, in <module>
+    args, MODEL_CONFIG, MODEL_CLASS, TOKENIZER, CONFIG_CLASS, SPECIAL_TOKEN_IDS, SPECIAL_TOKENS, DATA_ATTRS, TOKENS_WEIGHT = parse_args()
+  File "/raid/cs21mtech11006/Lamol_with_adapter_final/settings.py", line 128, in parse_args
+    model_config = config_class.from_pretrained(args.model_name)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/transformers/configuration_utils.py", line 519, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/transformers/configuration_utils.py", line 546, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/transformers/configuration_utils.py", line 594, in _get_config_dict
+    resolved_config_file = cached_path(
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/transformers/file_utils.py", line 1921, in cached_path
+    output_path = get_from_cache(
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/transformers/file_utils.py", line 2124, in get_from_cache
+    r = requests.head(url, headers=headers, allow_redirects=False, proxies=proxies, timeout=etag_timeout)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/requests/api.py", line 100, in head
+    return request("head", url, **kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/urllib3/connection.py", line 414, in connect
+    self.sock = ssl_wrap_socket(
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+KeyboardInterrupt

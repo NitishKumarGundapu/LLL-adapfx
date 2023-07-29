@@ -1,0 +1,39 @@
+nohup: ignoring input
+2021-11-14 13:12:49,509 - 0:00:11 - 0.0s - INFO - __main__ - args = Namespace(REG_TYPE_KEYS=['mas', 'ewc'], adam_epsilon=0.0001, add_task_tokens=False, data_dir='data', debug=False, decay_style='linear', device_ids=[0, 1, 2, 3, 4, 5, 6, 7], dynamic_epochs=False, fp32=True, gen_lm_sample_percentage=0.2, learning_rate=6.25e-05, lm_lambda=0.25, logging_steps=1000, lr_schedule='warmup_linear', max_grad_norm=1, max_len=1024, max_n_epochs=9, memory_sizes=[23407.2, 33810.4, 33810.4, 33810.4, 33810.4, 33810.4, 33810.4, 33810.4], min_batch_size=4, min_n_steps=1500, model_dir_root='models/gpt2/finetune/sst_srl_woz.en', model_name='gpt2', n_gpus=8, n_train_epochs={'sst': 3, 'srl': 3, 'woz.en': 3}, n_warmup_ratio=0.005, n_workers=75, qp_margin=0.5, real_sample=False, reg_lambda=1.0, seed=42, seq_train_type='finetune', skip_tasks=None, tasks=['sst', 'srl', 'woz.en'], temperature_lm=1.0, temperature_qa=1.0, test_batch_size=[13576, 19610, 19610, 19610, 19610, 19610, 19610, 19610], tokens_weight=5, top_k_lm=20, top_k_qa=20, top_p_lm=0.0, top_p_qa=0.0, train_batch_size=[13576, 19610, 19610, 19610, 19610, 19610, 19610, 19610], unbound=0, use_sep=False, weight_decay=0.01)
+2021-11-14 13:12:49,510 - 0:00:11 - 0.0s - INFO - __main__ - start to train { task: ['sst'], seq train type: finetune }
+2021-11-14 13:12:49,510 - 0:00:11 - 0.0s - INFO - __main__ - extra training data size: 0
+2021-11-14 13:12:54,320 - 0:00:15 - 4.8s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+2021-11-14 13:12:57,159 - 0:00:18 - 2.8s - INFO - __main__ - len of train dataset: 6920 , max train batch size 4 , num of opt steps: 20760
+/home/ai20mtech14009/anaconda3/envs/LAMOL/lib/python3.7/site-packages/torch/nn/parallel/_functions.py:64: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+2021-11-14 13:14:07,129 - 0:01:28 - 70.0s - INFO - __main__ - progress 0.578 , lr 5.1E-05 , loss 1.890 , qa loss 1.890 , lm loss 0.000 , avg batch size 4.0
+2021-11-14 13:14:57,437 - 0:02:19 - 50.3s - INFO - __main__ - epoch 1/3 done , tot steps 1730 , lr 4.2E-05 , loss 1.20 , qa loss 1.20 , lm loss 0.00 , avg batch size 4.0
+2021-11-14 13:16:06,823 - 0:03:28 - 69.4s - INFO - __main__ - progress 1.578 , lr 3.0E-05 , loss 0.203 , qa loss 0.203 , lm loss 0.000 , avg batch size 4.0
+2021-11-14 13:16:57,720 - 0:04:19 - 50.9s - INFO - __main__ - epoch 2/3 done , tot steps 3460 , lr 2.1E-05 , loss 0.20 , qa loss 0.20 , lm loss 0.00 , avg batch size 4.0
+2021-11-14 13:18:07,173 - 0:05:28 - 69.5s - INFO - __main__ - progress 2.578 , lr 8.9E-06 , loss 0.181 , qa loss 0.181 , lm loss 0.000 , avg batch size 4.0
+2021-11-14 13:18:58,578 - 0:06:20 - 51.4s - INFO - __main__ - epoch 3/3 done , tot steps 5190 , lr 1.0E-07 , loss 0.19 , qa loss 0.19 , lm loss 0.00 , avg batch size 4.0
+2021-11-14 13:19:03,564 - 0:06:25 - 5.0s - INFO - __main__ - start to train { task: ['srl'], seq train type: finetune }
+2021-11-14 13:19:08,072 - 0:06:29 - 4.5s - INFO - __main__ - extra training data size: 0
+2021-11-14 13:19:08,154 - 0:06:29 - 0.1s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+The current active adapter is Stack[sst]
+The task with which model is saved sst
+2021-11-14 13:19:10,804 - 0:06:32 - 2.6s - INFO - __main__ - len of train dataset: 6414 , max train batch size 4 , num of opt steps: 19242
+Overwriting existing adapter 'sst'.
+2021-11-14 13:20:44,664 - 0:08:06 - 93.9s - INFO - __main__ - progress 0.624 , lr 5.0E-05 , loss 1.475 , qa loss 1.475 , lm loss 0.000 , avg batch size 4.0
+2021-11-14 13:21:41,449 - 0:09:03 - 56.8s - INFO - __main__ - epoch 1/3 done , tot steps 1604 , lr 4.2E-05 , loss 1.27 , qa loss 1.27 , lm loss 0.00 , avg batch size 4.0
+2021-11-14 13:23:13,522 - 0:10:35 - 92.1s - INFO - __main__ - progress 1.624 , lr 2.9E-05 , loss 0.792 , qa loss 0.792 , lm loss 0.000 , avg batch size 4.0
+2021-11-14 13:24:10,378 - 0:11:32 - 56.9s - INFO - __main__ - epoch 2/3 done , tot steps 3208 , lr 2.1E-05 , loss 0.77 , qa loss 0.77 , lm loss 0.00 , avg batch size 4.0
+2021-11-14 13:25:42,425 - 0:13:04 - 92.0s - INFO - __main__ - progress 2.624 , lr 7.9E-06 , loss 0.704 , qa loss 0.704 , lm loss 0.000 , avg batch size 4.0
+2021-11-14 13:26:38,855 - 0:14:00 - 56.4s - INFO - __main__ - epoch 3/3 done , tot steps 4812 , lr 1.0E-07 , loss 0.70 , qa loss 0.70 , lm loss 0.00 , avg batch size 4.0
+2021-11-14 13:26:44,223 - 0:14:05 - 5.4s - INFO - __main__ - start to train { task: ['woz.en'], seq train type: finetune }
+2021-11-14 13:26:48,946 - 0:14:10 - 4.7s - INFO - __main__ - extra training data size: 0
+2021-11-14 13:26:49,041 - 0:14:10 - 0.1s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+The current active adapter is Stack[sst]
+The task with which model is saved sst
+2021-11-14 13:26:51,863 - 0:14:13 - 2.8s - INFO - __main__ - len of train dataset: 2536 , max train batch size 4 , num of opt steps: 7608
+Overwriting existing adapter 'sst'.
+2021-11-14 13:27:37,852 - 0:14:59 - 46.0s - INFO - __main__ - epoch 1/3 done , tot steps 634 , lr 4.2E-05 , loss 0.96 , qa loss 0.96 , lm loss 0.00 , avg batch size 4.0
+2021-11-14 13:28:23,534 - 0:15:45 - 45.7s - INFO - __main__ - epoch 2/3 done , tot steps 1268 , lr 2.1E-05 , loss 0.35 , qa loss 0.35 , lm loss 0.00 , avg batch size 4.0
+2021-11-14 13:29:09,473 - 0:16:31 - 45.9s - INFO - __main__ - epoch 3/3 done , tot steps 1902 , lr 9.9E-08 , loss 0.29 , qa loss 0.29 , lm loss 0.00 , avg batch size 4.0
+The current active adapter is Stack[sst]
+The task with which model is saved sst

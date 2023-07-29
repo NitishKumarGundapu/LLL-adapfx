@@ -1,0 +1,39 @@
+Available number of GPU = 7 < n_gpus = 8
+Continue training with 7 GPUs
+2022-09-03 14:18:25,425 - 0:00:10 - 0.0s - INFO - __main__ - args = Namespace(REG_TYPE_KEYS=['mas', 'ewc'], adam_epsilon=0.0001, add_task_tokens=False, data_dir='data', debug=False, decay_style='linear', device_ids=[1, 2, 4, 7, 8, 11, 14], dynamic_epochs=False, fp32=True, gen_lm_sample_percentage=0.0, learning_rate=6.25e-05, lm_lambda=0.0, logging_steps=1000, lr_schedule='warmup_linear', max_grad_norm=1, max_len=1024, max_n_epochs=9, memory_sizes=[24903.68, 34078.72, 34078.72, 34078.72, 34078.72, 34078.72, 34078.72], min_batch_size=4, min_n_steps=1500, model_dir_root='models/gpt2/lll/squad1_wikisql_sst_srl_woz.en_0.0', model_name='gpt2', n_gpus=7, n_train_epochs={'squad1': 8, 'wikisql': 8, 'sst': 8, 'srl': 8, 'woz.en': 8}, n_warmup_ratio=0.005, n_workers=75, qp_margin=0.5, real_sample=False, reg_lambda=1.0, seed=42, seq_train_type='lll', skip_tasks=None, tasks=['squad1', 'wikisql', 'sst', 'srl', 'woz.en'], temperature_lm=1.0, temperature_qa=1.0, test_batch_size=[8716, 11927, 11927, 11927, 11927, 11927, 11927], tokens_weight=5, top_k_lm=20, top_k_qa=20, top_p_lm=0.0, top_p_qa=0.0, train_batch_size=[8716, 11927, 11927, 11927, 11927, 11927, 11927], unbound=0, use_sep=False, weight_decay=0.01)
+2022-09-03 14:18:25,425 - 0:00:10 - 0.0s - INFO - __main__ - start to train { task: ['squad1'], seq train type: lll }
+2022-09-03 14:18:25,425 - 0:00:10 - 0.0s - INFO - __main__ - extra training data size: 0
+2022-09-03 14:18:29,618 - 0:00:14 - 4.2s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+Token indices sequence length is longer than the specified maximum sequence length for this model (6410 > 1024). Running this sequence through the model will result in indexing errors
+2022-09-03 14:18:42,121 - 0:00:26 - 12.5s - WARNING - utils - an example with len 6412 is too long!
+2022-09-03 14:18:42,122 - 0:00:26 - 0.0s - WARNING - utils - an example with len 6416 is too long!
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/raid/cs21mtech11006/Lamol_with_adapter_final/utils.py", line 266, in parallel_tokenization
+    examples.append(self.parse_example(self.gen_token, context, question, answer, qa.get("id", 0)))
+  File "/raid/cs21mtech11006/Lamol_with_adapter_final/utils.py", line 238, in parse_example
+    Y_example = [FILL_VAL] * (len(cqa_example) - len(Y_example)) + Y_example
+TypeError: object of type 'NoneType' has no len()
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "train_experiment_adapter_from_scratch_mam_config.py", line 284, in <module>
+    model = train([task_id], model)
+  File "train_experiment_adapter_from_scratch_mam_config.py", line 130, in train
+    train_qadata = QADataset(train_dataset, "train", SPECIAL_TOKEN_IDS[tasks[0]], train_extra_data)
+  File "/raid/cs21mtech11006/Lamol_with_adapter_final/utils.py", line 193, in __init__
+    self.data_tokenization(data)
+  File "/raid/cs21mtech11006/Lamol_with_adapter_final/utils.py", line 278, in data_tokenization
+    data = pool.map(self.parallel_tokenization, data)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+TypeError: object of type 'NoneType' has no len()

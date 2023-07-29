@@ -1,0 +1,80 @@
+Available number of GPU = 3 < n_gpus = 12
+Continue training with 3 GPUs
+2023-07-29 14:48:20,632 - 0:00:05 - 0.0s - INFO - __main__ - args = Namespace(REG_TYPE_KEYS=['mas', 'ewc'], adam_epsilon=0.0001, add_task_tokens=False, data_dir='data', debug=False, decay_style='linear', device_ids=[13, 14, 15], dynamic_epochs=False, fp32=True, gen_lm_sample_percentage=0.2, learning_rate=6.25e-05, lm_lambda=0.2, logging_steps=1000, lr_schedule='warmup_linear', max_grad_norm=1, max_len=1024, max_n_epochs=9, memory_sizes=[30146.56, 34078.72, 34078.72], min_batch_size=4, min_n_steps=1500, model_dir_root='model_ag/gpt2/lll/sst_srl_woz.en_0.2', model_name='gpt2', n_gpus=3, n_train_epochs={'sst': 10, 'srl': 10, 'woz.en': 10}, n_warmup_ratio=0.005, n_workers=75, qp_margin=0.5, real_sample=False, reg_lambda=1.0, seed=42, seq_train_type='lll', skip_tasks=None, tasks=['sst', 'srl', 'woz.en'], temperature_lm=1.0, temperature_qa=1.0, test_batch_size=[10551, 11927, 11927], tokens_weight=5, top_k_lm=20, top_k_qa=20, top_p_lm=0.0, top_p_qa=0.0, train_batch_size=[10551, 11927, 11927], unbound=0, use_sep=False, weight_decay=0.01)
+2023-07-29 14:48:20,632 - 0:00:05 - 0.0s - INFO - __main__ - start to train { task: ['sst'], seq train type: lll }
+2023-07-29 14:48:20,633 - 0:00:05 - 0.0s - INFO - __main__ - extra training data size: 0
+2023-07-29 14:48:23,752 - 0:00:08 - 3.1s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+[0]
+2023-07-29 14:48:38,450 - 0:00:23 - 14.7s - INFO - __main__ - len of train dataset: 6920 , max train batch size 4 , num of opt steps: 69200
+/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+2023-07-29 14:50:37,842 - 0:02:22 - 119.4s - INFO - __main__ - progress 0.578 , lr 5.9E-05 , loss 2.061 , qa loss 2.061 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 14:51:28,262 - 0:03:13 - 50.4s - INFO - __main__ - epoch 1/10 done , tot steps 1730 , lr 5.6E-05 , loss 1.34 , qa loss 1.34 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 14:53:40,568 - 0:05:25 - 132.3s - INFO - __main__ - progress 1.578 , lr 5.3E-05 , loss 0.350 , qa loss 0.350 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 14:54:41,203 - 0:06:26 - 60.6s - INFO - __main__ - epoch 2/10 done , tot steps 3460 , lr 5.0E-05 , loss 0.34 , qa loss 0.34 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 14:56:56,601 - 0:08:41 - 135.4s - INFO - __main__ - progress 2.578 , lr 4.6E-05 , loss 0.289 , qa loss 0.289 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 14:58:01,881 - 0:09:46 - 65.3s - INFO - __main__ - epoch 3/10 done , tot steps 5190 , lr 4.4E-05 , loss 0.28 , qa loss 0.28 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:00:21,190 - 0:12:06 - 139.3s - INFO - __main__ - progress 3.578 , lr 4.0E-05 , loss 0.237 , qa loss 0.237 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:01:28,008 - 0:13:13 - 66.8s - INFO - __main__ - epoch 4/10 done , tot steps 6920 , lr 3.8E-05 , loss 0.23 , qa loss 0.23 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:03:49,849 - 0:15:34 - 141.8s - INFO - __main__ - progress 4.578 , lr 3.4E-05 , loss 0.201 , qa loss 0.201 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:04:53,794 - 0:16:38 - 63.9s - INFO - __main__ - epoch 5/10 done , tot steps 8650 , lr 3.1E-05 , loss 0.19 , qa loss 0.19 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:07:13,529 - 0:18:58 - 139.7s - INFO - __main__ - progress 5.578 , lr 2.8E-05 , loss 0.187 , qa loss 0.187 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:08:03,122 - 0:19:48 - 49.6s - INFO - __main__ - epoch 6/10 done , tot steps 10380 , lr 2.5E-05 , loss 0.18 , qa loss 0.18 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:09:58,753 - 0:21:43 - 115.6s - INFO - __main__ - progress 6.578 , lr 2.1E-05 , loss 0.167 , qa loss 0.167 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:11:15,969 - 0:23:01 - 77.2s - INFO - __main__ - epoch 7/10 done , tot steps 12110 , lr 1.9E-05 , loss 0.17 , qa loss 0.17 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:13:28,159 - 0:25:13 - 132.2s - INFO - __main__ - progress 7.578 , lr 1.5E-05 , loss 0.150 , qa loss 0.150 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:14:49,842 - 0:26:34 - 81.7s - INFO - __main__ - epoch 8/10 done , tot steps 13840 , lr 1.3E-05 , loss 0.16 , qa loss 0.16 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:17:09,152 - 0:28:54 - 139.3s - INFO - __main__ - progress 8.578 , lr 8.9E-06 , loss 0.149 , qa loss 0.149 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:18:12,524 - 0:29:57 - 63.4s - INFO - __main__ - epoch 9/10 done , tot steps 15570 , lr 6.3E-06 , loss 0.15 , qa loss 0.15 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:20:20,523 - 0:32:05 - 128.0s - INFO - __main__ - progress 9.578 , lr 2.7E-06 , loss 0.146 , qa loss 0.146 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:21:34,362 - 0:33:19 - 73.8s - INFO - __main__ - epoch 10/10 done , tot steps 17300 , lr 3.1E-08 , loss 0.14 , qa loss 0.14 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:21:35,677 - 0:33:20 - 1.3s - INFO - __main__ - start to train { task: ['srl'], seq train type: lll }
+2023-07-29 15:21:35,678 - 0:33:20 - 0.0s - INFO - __main__ - extra training data size: 0
+2023-07-29 15:21:35,822 - 0:33:20 - 0.1s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+The current active adapter is Stack[sst]
+The task with which model is saved sst
+[1]
+2023-07-29 15:21:45,791 - 0:33:30 - 10.0s - INFO - __main__ - len of train dataset: 6414 , max train batch size 4 , num of opt steps: 64140
+2023-07-29 15:24:39,566 - 0:36:24 - 173.8s - INFO - __main__ - progress 0.624 , lr 5.9E-05 , loss 4.022 , qa loss 4.022 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:25:49,729 - 0:37:34 - 70.2s - INFO - __main__ - epoch 1/10 done , tot steps 1604 , lr 5.6E-05 , loss 2.94 , qa loss 2.94 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:28:37,312 - 0:40:22 - 167.6s - INFO - __main__ - progress 1.624 , lr 5.2E-05 , loss 0.988 , qa loss 0.988 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:29:37,578 - 0:41:22 - 60.3s - INFO - __main__ - epoch 2/10 done , tot steps 3208 , lr 5.0E-05 , loss 0.95 , qa loss 0.95 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:32:32,251 - 0:44:17 - 174.7s - INFO - __main__ - progress 2.624 , lr 4.6E-05 , loss 0.801 , qa loss 0.801 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:33:45,037 - 0:45:30 - 72.8s - INFO - __main__ - epoch 3/10 done , tot steps 4812 , lr 4.4E-05 , loss 0.81 , qa loss 0.81 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:36:40,385 - 0:48:25 - 175.3s - INFO - __main__ - progress 3.624 , lr 4.0E-05 , loss 0.712 , qa loss 0.712 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:37:52,773 - 0:49:37 - 72.4s - INFO - __main__ - epoch 4/10 done , tot steps 6416 , lr 3.8E-05 , loss 0.70 , qa loss 0.70 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:40:48,841 - 0:52:33 - 176.1s - INFO - __main__ - progress 4.624 , lr 3.4E-05 , loss 0.629 , qa loss 0.629 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:41:59,026 - 0:53:44 - 70.2s - INFO - __main__ - epoch 5/10 done , tot steps 8020 , lr 3.1E-05 , loss 0.63 , qa loss 0.63 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:44:55,206 - 0:56:40 - 176.2s - INFO - __main__ - progress 5.624 , lr 2.7E-05 , loss 0.614 , qa loss 0.614 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:46:05,065 - 0:57:50 - 69.9s - INFO - __main__ - epoch 6/10 done , tot steps 9624 , lr 2.5E-05 , loss 0.61 , qa loss 0.61 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:48:46,568 - 1:00:31 - 161.5s - INFO - __main__ - progress 6.624 , lr 2.1E-05 , loss 0.571 , qa loss 0.571 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:49:44,468 - 1:01:29 - 57.9s - INFO - __main__ - epoch 7/10 done , tot steps 11228 , lr 1.9E-05 , loss 0.58 , qa loss 0.58 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:52:40,000 - 1:04:25 - 175.5s - INFO - __main__ - progress 7.624 , lr 1.5E-05 , loss 0.570 , qa loss 0.570 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:53:50,465 - 1:05:35 - 70.5s - INFO - __main__ - epoch 8/10 done , tot steps 12832 , lr 1.3E-05 , loss 0.56 , qa loss 0.56 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 15:56:35,716 - 1:08:20 - 165.3s - INFO - __main__ - progress 8.624 , lr 8.6E-06 , loss 0.544 , qa loss 0.544 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 15:58:10,086 - 1:09:55 - 94.4s - INFO - __main__ - epoch 9/10 done , tot steps 14436 , lr 6.3E-06 , loss 0.54 , qa loss 0.54 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 16:00:31,946 - 1:12:17 - 141.9s - INFO - __main__ - progress 9.624 , lr 2.4E-06 , loss 0.525 , qa loss 0.525 , lm loss 0.000 , avg batch size 4.0
+2023-07-29 16:01:45,990 - 1:13:31 - 74.0s - INFO - __main__ - epoch 10/10 done , tot steps 16040 , lr 3.1E-08 , loss 0.53 , qa loss 0.53 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 16:01:47,523 - 1:13:32 - 1.5s - INFO - __main__ - start to train { task: ['woz.en'], seq train type: lll }
+2023-07-29 16:01:47,523 - 1:13:32 - 0.0s - INFO - __main__ - extra training data size: 0
+2023-07-29 16:01:47,685 - 1:13:32 - 0.2s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+The current active adapter is Stack[srl]
+The task with which model is saved srl
+[2]
+2023-07-29 16:01:57,811 - 1:13:42 - 10.1s - INFO - __main__ - len of train dataset: 2536 , max train batch size 4 , num of opt steps: 25360
+2023-07-29 16:03:16,785 - 1:15:01 - 79.0s - INFO - __main__ - epoch 1/10 done , tot steps 634 , lr 5.6E-05 , loss 5.81 , qa loss 5.81 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 16:04:34,638 - 1:16:19 - 77.9s - INFO - __main__ - epoch 2/10 done , tot steps 1268 , lr 5.0E-05 , loss 1.46 , qa loss 1.46 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 16:05:53,256 - 1:17:38 - 78.6s - INFO - __main__ - epoch 3/10 done , tot steps 1902 , lr 4.4E-05 , loss 0.88 , qa loss 0.88 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 16:07:21,780 - 1:19:06 - 88.5s - INFO - __main__ - epoch 4/10 done , tot steps 2536 , lr 3.8E-05 , loss 0.67 , qa loss 0.67 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 16:08:36,898 - 1:20:22 - 75.1s - INFO - __main__ - epoch 5/10 done , tot steps 3170 , lr 3.1E-05 , loss 0.57 , qa loss 0.57 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 16:09:38,868 - 1:21:23 - 62.0s - INFO - __main__ - epoch 6/10 done , tot steps 3804 , lr 2.5E-05 , loss 0.50 , qa loss 0.50 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 16:10:50,203 - 1:22:35 - 71.3s - INFO - __main__ - epoch 7/10 done , tot steps 4438 , lr 1.9E-05 , loss 0.46 , qa loss 0.46 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 16:12:09,515 - 1:23:54 - 79.3s - INFO - __main__ - epoch 8/10 done , tot steps 5072 , lr 1.3E-05 , loss 0.42 , qa loss 0.42 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 16:13:26,423 - 1:25:11 - 76.9s - INFO - __main__ - epoch 9/10 done , tot steps 5706 , lr 6.3E-06 , loss 0.40 , qa loss 0.40 , lm loss 0.00 , avg batch size 4.0
+2023-07-29 16:14:44,740 - 1:26:29 - 78.3s - INFO - __main__ - epoch 10/10 done , tot steps 6340 , lr 3.0E-08 , loss 0.37 , qa loss 0.37 , lm loss 0.00 , avg batch size 4.0
+The current active adapter is Stack[woz_en]
+The task with which model is saved woz_en
+Wall Execution time: 01:26:26
+CPU Execution time: 01:19:37

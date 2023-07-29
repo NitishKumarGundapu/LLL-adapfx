@@ -1,0 +1,134 @@
+2022-09-04 01:46:45,269 - 0:00:10 - 0.0s - INFO - __main__ - args = Namespace(REG_TYPE_KEYS=['mas', 'ewc'], adam_epsilon=0.0001, add_task_tokens=False, data_dir='data', debug=False, decay_style='linear', device_ids=[1, 2, 4, 7, 8, 10, 11, 14], dynamic_epochs=False, fp32=True, gen_lm_sample_percentage=0.0, learning_rate=6.25e-05, lm_lambda=0.0, logging_steps=1000, lr_schedule='warmup_linear', max_grad_norm=1, max_len=1024, max_n_epochs=9, memory_sizes=[23592.96, 34078.72, 34078.72, 34078.72, 34078.72, 34078.72, 34078.72, 34078.72], min_batch_size=4, min_n_steps=1500, model_dir_root='models/gpt2/lll/wikisql_amazon_yelp_0.0', model_name='gpt2', n_gpus=8, n_train_epochs={'wikisql': 12, 'amazon': 12, 'yelp': 12}, n_warmup_ratio=0.005, n_workers=75, qp_margin=0.5, real_sample=False, reg_lambda=1.0, seed=42, seq_train_type='lll', skip_tasks=None, tasks=['wikisql', 'amazon', 'yelp'], temperature_lm=1.0, temperature_qa=1.0, test_batch_size=[8257, 11927, 11927, 11927, 11927, 11927, 11927, 11927], tokens_weight=5, top_k_lm=20, top_k_qa=20, top_p_lm=0.0, top_p_qa=0.0, train_batch_size=[8257, 11927, 11927, 11927, 11927, 11927, 11927, 11927], unbound=0, use_sep=False, weight_decay=0.01)
+2022-09-04 01:46:45,269 - 0:00:10 - 0.0s - INFO - __main__ - start to train { task: ['wikisql'], seq train type: lll }
+2022-09-04 01:46:45,269 - 0:00:10 - 0.0s - INFO - __main__ - extra training data size: 0
+2022-09-04 01:46:49,561 - 0:00:15 - 4.3s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+2022-09-04 01:51:19,826 - 0:04:45 - 270.3s - INFO - __main__ - len of train dataset: 56355 , max train batch size 37 , num of opt steps: 676260
+/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+2022-09-04 02:03:21,698 - 0:16:47 - 721.9s - INFO - __main__ - progress 0.657 , lr 5.9E-05 , loss 2.003 , qa loss 2.003 , lm loss 0.000 , avg batch size 37.0
+Process Process-120:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-143:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-146:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-145:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process Process-147:
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 360, in _exit_function
+    _run_finalizers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/queues.py", line 195, in _finalize_join
+    thread.join()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fa976af14c0>
+Traceback (most recent call last):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1510, in __del__
+    self._shutdown_workers()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1474, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/popen_fork.py", line 44, in wait
+    if not wait([self.sentinel], timeout):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt: 
+Traceback (most recent call last):
+  File "train_experiment_adapter_from_scratch_mam_config.py", line 284, in <module>
+    model = train([task_id], model)
+  File "train_experiment_adapter_from_scratch_mam_config.py", line 217, in train
+    losses = get_losses(parallel_model, cqa, Y, gen_X, gen_Y, train_loss_fct)
+  File "/raid/cs21mtech11006/Lamol_with_adapter_final/utils.py", line 46, in get_losses
+    qa_logits = parallel_model(cqa)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/raid/cs21mtech11006/Lamol_with_adapter_final/parallel.py", line 17, in forward
+    replicas = self.replicate(self.module, self.device_ids[:len(inputs)])
+  File "/raid/cs21mtech11006/Lamol_with_adapter_final/parallel.py", line 22, in replicate
+    modules = super(DataParallelModel, self).replicate(module, device_ids)
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py", line 172, in replicate
+    return replicate(module, device_ids, not torch.is_grad_enabled())
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/parallel/replicate.py", line 115, in replicate
+    replica = module._replicate_for_data_parallel()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1971, in _replicate_for_data_parallel
+    replica._buffers = replica._buffers.copy()
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1220, in __setattr__
+    if isinstance(value, Parameter):
+  File "/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/parameter.py", line 10, in __instancecheck__
+    return super().__instancecheck__(instance) or (
+KeyboardInterrupt

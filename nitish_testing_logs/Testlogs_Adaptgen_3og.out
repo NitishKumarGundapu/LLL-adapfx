@@ -1,0 +1,26 @@
+2023-07-28 14:10:47,840 - 0:00:08 - 0.0s - INFO - __main__ - args = Namespace(adam_epsilon=0.0001, add_task_tokens=False, data_dir='data', debug=False, decay_style='linear', device_ids=[6], dynamic_epochs=False, fp32=False, gen_lm_sample_percentage=0.1, learning_rate=6.25e-05, lm_lambda=0.2, logging_steps=1000, lr_schedule='warmup_linear', max_grad_norm=1, max_len=1024, max_n_epochs=9, memory_sizes=[32768.0], min_batch_size=4, min_n_steps=1500, model_dir_root='models/gpt2/lll/sst_srl_woz.en_0.1', model_name='gpt2', n_gpus=1, n_train_epochs={'sst': 10, 'srl': 10, 'woz.en': 10}, n_warmup_ratio=0.005, n_workers=35, qp_margin=0.5, real_sample=False, reg_lambda=1.0, seed=42, seq_train_type='lll', skip_tasks=None, tasks=['sst', 'srl', 'woz.en'], temperature_lm=1.0, temperature_qa=1.0, test_batch_size=[16056], tokens_weight=5, top_k_lm=20, top_k_qa=20, top_p_lm=0.0, top_p_qa=0.0, train_batch_size=[16056], unbound=0, use_sep=False, weight_decay=0.01)
+Traceback (most recent call last):
+  File "test_adapter_from_scratch.py", line 168, in <module>
+    test_one_to_many(task_load)
+  File "test_adapter_from_scratch.py", line 119, in test_one_to_many
+    model = MODEL_CLASS(model_config).cuda().eval()
+  File "/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 988, in __init__
+    self.transformer = GPT2Model(config)
+  File "/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 718, in __init__
+    self.post_init()
+  File "/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/transformers/modeling_utils.py", line 1043, in post_init
+    self.init_weights()
+  File "/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/transformers/modeling_utils.py", line 1507, in init_weights
+    self.apply(self._init_weights)
+  File "/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/modules/module.py", line 884, in apply
+    module.apply(fn)
+  File "/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/modules/module.py", line 884, in apply
+    module.apply(fn)
+  File "/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/modules/module.py", line 884, in apply
+    module.apply(fn)
+  [Previous line repeated 1 more time]
+  File "/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/modules/module.py", line 885, in apply
+    fn(self)
+  File "/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 487, in _init_weights
+    module.weight.data.normal_(mean=0.0, std=self.config.initializer_range)
+KeyboardInterrupt

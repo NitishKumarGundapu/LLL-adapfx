@@ -1,0 +1,48 @@
+2023-02-19 19:33:07,789 - 0:00:09 - 0.0s - INFO - __main__ - args = Namespace(REG_TYPE_KEYS=['mas', 'ewc'], adam_epsilon=0.0001, add_task_tokens=False, data_dir='data', debug=False, decay_style='linear', device_ids=[0, 1, 2, 3, 4, 5, 7, 8], dynamic_epochs=False, fp32=True, gen_lm_sample_percentage=0.2, learning_rate=6.25e-05, lm_lambda=0.2, logging_steps=1000, lr_schedule='warmup_linear', max_grad_norm=1, max_len=1024, max_n_epochs=9, memory_sizes=[23592.96, 34078.72, 34078.72, 34078.72, 34078.72, 34078.72, 34078.72, 34078.72], min_batch_size=4, min_n_steps=1500, model_dir_root='new_models/gpt2/lll/amazon_dbpedia_ag_yahoo_yelp_0.2', model_name='gpt2', n_gpus=8, n_train_epochs={'amazon': 8, 'dbpedia': 8, 'ag': 8, 'yahoo': 8, 'yelp': 8}, n_warmup_ratio=0.005, n_workers=75, qp_margin=0.5, real_sample=False, reg_lambda=1.0, seed=42, seq_train_type='lll', skip_tasks=None, tasks=['amazon', 'dbpedia', 'ag', 'yahoo', 'yelp'], temperature_lm=1.0, temperature_qa=1.0, test_batch_size=[8257, 11927, 11927, 11927, 11927, 11927, 11927, 11927], tokens_weight=5, top_k_lm=20, top_k_qa=20, top_p_lm=0.0, top_p_qa=0.0, train_batch_size=[8257, 11927, 11927, 11927, 11927, 11927, 11927, 11927], unbound=0, use_sep=False, weight_decay=0.01)
+2023-02-19 19:33:07,789 - 0:00:09 - 0.0s - INFO - __main__ - start to train { task: ['amazon'], seq train type: lll }
+2023-02-19 19:33:07,789 - 0:00:09 - 0.0s - INFO - __main__ - extra training data size: 0
+2023-02-19 19:33:11,710 - 0:00:13 - 3.9s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+[0]
+2023-02-19 19:33:24,212 - 0:00:26 - 12.5s - INFO - __main__ - len of train dataset: 115000 , max train batch size 76 , num of opt steps: 920000
+/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+/raid/cs21mtech11006/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+2023-02-19 19:51:37,263 - 0:18:39 - 1093.1s - INFO - __main__ - progress 0.661 , lr 5.7E-05 , loss 2.422 , qa loss 1.295 , lm loss 1.127 , avg batch size 76.0
+2023-02-19 20:00:47,710 - 0:27:49 - 550.4s - INFO - __main__ - epoch 1/8 done , tot steps 1514 , lr 5.5E-05 , loss 1.96 , qa loss 1.00 , lm loss 0.96 , avg batch size 76.0
+2023-02-19 20:18:41,112 - 0:45:43 - 1073.4s - INFO - __main__ - progress 1.661 , lr 5.0E-05 , loss 1.042 , qa loss 0.408 , lm loss 0.634 , avg batch size 76.0
+2023-02-19 20:27:54,019 - 0:54:55 - 552.9s - INFO - __main__ - epoch 2/8 done , tot steps 3028 , lr 4.7E-05 , loss 1.04 , qa loss 0.41 , lm loss 0.63 , avg batch size 76.0
+2023-02-19 20:45:46,737 - 1:12:48 - 1072.7s - INFO - __main__ - progress 2.661 , lr 4.2E-05 , loss 1.013 , qa loss 0.387 , lm loss 0.626 , avg batch size 76.0
+2023-02-19 20:54:56,328 - 1:21:58 - 549.6s - INFO - __main__ - epoch 3/8 done , tot steps 4542 , lr 3.9E-05 , loss 1.01 , qa loss 0.39 , lm loss 0.63 , avg batch size 76.0
+2023-02-19 21:12:52,767 - 1:39:54 - 1076.4s - INFO - __main__ - progress 3.661 , lr 3.4E-05 , loss 0.995 , qa loss 0.373 , lm loss 0.621 , avg batch size 76.0
+2023-02-19 21:22:02,410 - 1:49:04 - 549.6s - INFO - __main__ - epoch 4/8 done , tot steps 6056 , lr 3.1E-05 , loss 0.99 , qa loss 0.37 , lm loss 0.62 , avg batch size 76.0
+2023-02-19 21:40:06,890 - 2:07:08 - 1084.5s - INFO - __main__ - progress 4.661 , lr 2.6E-05 , loss 0.981 , qa loss 0.362 , lm loss 0.620 , avg batch size 76.0
+2023-02-19 21:49:22,546 - 2:16:24 - 555.7s - INFO - __main__ - epoch 5/8 done , tot steps 7570 , lr 2.3E-05 , loss 0.98 , qa loss 0.36 , lm loss 0.62 , avg batch size 76.0
+2023-02-19 22:07:17,524 - 2:34:19 - 1075.0s - INFO - __main__ - progress 5.661 , lr 1.8E-05 , loss 0.971 , qa loss 0.353 , lm loss 0.617 , avg batch size 76.0
+2023-02-19 22:16:23,340 - 2:43:25 - 545.8s - INFO - __main__ - epoch 6/8 done , tot steps 9084 , lr 1.6E-05 , loss 0.97 , qa loss 0.35 , lm loss 0.62 , avg batch size 76.0
+2023-02-19 22:34:07,978 - 3:01:09 - 1064.6s - INFO - __main__ - progress 6.661 , lr 1.1E-05 , loss 0.965 , qa loss 0.348 , lm loss 0.617 , avg batch size 76.0
+2023-02-19 22:43:09,955 - 3:10:11 - 542.0s - INFO - __main__ - epoch 7/8 done , tot steps 10598 , lr 7.9E-06 , loss 0.96 , qa loss 0.35 , lm loss 0.62 , avg batch size 76.0
+2023-02-19 23:02:05,899 - 3:29:07 - 1135.9s - INFO - __main__ - progress 7.661 , lr 2.7E-06 , loss 0.957 , qa loss 0.341 , lm loss 0.616 , avg batch size 76.0
+2023-02-19 23:11:11,411 - 3:38:13 - 545.5s - INFO - __main__ - epoch 8/8 done , tot steps 12112 , lr 3.9E-08 , loss 0.96 , qa loss 0.34 , lm loss 0.62 , avg batch size 76.0
+2023-02-19 23:11:13,423 - 3:38:15 - 2.0s - INFO - __main__ - start to train { task: ['amazon'], seq train type: lll }
+2023-02-19 23:11:13,423 - 3:38:15 - 0.0s - INFO - __main__ - extra training data size: 0
+2023-02-19 23:11:13,479 - 3:38:15 - 0.1s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+[0]
+2023-02-19 23:11:27,803 - 3:38:29 - 14.3s - INFO - __main__ - len of train dataset: 115000 , max train batch size 76 , num of opt steps: 920000
+2023-02-19 23:21:14,226 - 3:48:16 - 586.4s - INFO - __main__ - progress 0.661 , lr 5.7E-05 , loss 0.355 , qa loss 0.355 , lm loss 0.000 , avg batch size 76.0
+2023-02-19 23:25:34,563 - 3:52:36 - 260.3s - INFO - __main__ - epoch 1/8 done , tot steps 1514 , lr 5.5E-05 , loss 0.35 , qa loss 0.35 , lm loss 0.00 , avg batch size 76.0
+2023-02-19 23:34:11,079 - 4:01:13 - 516.5s - INFO - __main__ - progress 1.661 , lr 5.0E-05 , loss 0.344 , qa loss 0.344 , lm loss 0.000 , avg batch size 76.0
+2023-02-19 23:38:33,390 - 4:05:35 - 262.3s - INFO - __main__ - epoch 2/8 done , tot steps 3028 , lr 4.7E-05 , loss 0.34 , qa loss 0.34 , lm loss 0.00 , avg batch size 76.0
+2023-02-19 23:47:09,897 - 4:14:11 - 516.5s - INFO - __main__ - progress 2.661 , lr 4.2E-05 , loss 0.340 , qa loss 0.340 , lm loss 0.000 , avg batch size 76.0
+2023-02-19 23:51:32,073 - 4:18:33 - 262.2s - INFO - __main__ - epoch 3/8 done , tot steps 4542 , lr 3.9E-05 , loss 0.34 , qa loss 0.34 , lm loss 0.00 , avg batch size 76.0
+2023-02-20 00:00:07,213 - 4:27:09 - 515.1s - INFO - __main__ - progress 3.661 , lr 3.4E-05 , loss 0.334 , qa loss 0.334 , lm loss 0.000 , avg batch size 76.0
+2023-02-20 00:04:30,075 - 4:31:32 - 262.9s - INFO - __main__ - epoch 4/8 done , tot steps 6056 , lr 3.1E-05 , loss 0.33 , qa loss 0.33 , lm loss 0.00 , avg batch size 76.0
+2023-02-20 00:13:09,499 - 4:40:11 - 519.4s - INFO - __main__ - progress 4.661 , lr 2.6E-05 , loss 0.331 , qa loss 0.331 , lm loss 0.000 , avg batch size 76.0
+2023-02-20 00:17:33,579 - 4:44:35 - 264.1s - INFO - __main__ - epoch 5/8 done , tot steps 7570 , lr 2.3E-05 , loss 0.33 , qa loss 0.33 , lm loss 0.00 , avg batch size 76.0
+2023-02-20 00:26:13,856 - 4:53:15 - 520.3s - INFO - __main__ - progress 5.661 , lr 1.8E-05 , loss 0.327 , qa loss 0.327 , lm loss 0.000 , avg batch size 76.0
+2023-02-20 00:30:35,699 - 4:57:37 - 261.8s - INFO - __main__ - epoch 6/8 done , tot steps 9084 , lr 1.6E-05 , loss 0.33 , qa loss 0.33 , lm loss 0.00 , avg batch size 76.0
+2023-02-20 00:39:12,657 - 5:06:14 - 517.0s - INFO - __main__ - progress 6.661 , lr 1.1E-05 , loss 0.327 , qa loss 0.327 , lm loss 0.000 , avg batch size 76.0
+2023-02-20 00:43:36,649 - 5:10:38 - 264.0s - INFO - __main__ - epoch 7/8 done , tot steps 10598 , lr 7.9E-06 , loss 0.33 , qa loss 0.33 , lm loss 0.00 , avg batch size 76.0
+2023-02-20 00:52:12,249 - 5:19:14 - 515.6s - INFO - __main__ - progress 7.661 , lr 2.7E-06 , loss 0.324 , qa loss 0.324 , lm loss 0.000 , avg batch size 76.0
+2023-02-20 00:56:33,676 - 5:23:35 - 261.4s - INFO - __main__ - epoch 8/8 done , tot steps 12112 , lr 3.9E-08 , loss 0.32 , qa loss 0.32 , lm loss 0.00 , avg batch size 76.0
+2023-02-20 00:56:36,588 - 5:23:38 - 2.9s - INFO - __main__ - start to train { task: ['dbpedia'], seq train type: lll }

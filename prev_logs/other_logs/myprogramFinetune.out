@@ -1,0 +1,41 @@
+nohup: ignoring input
+Available number of GPU = 7 < n_gpus = 8
+Continue training with 7 GPUs
+2021-12-28 10:29:50,998 - 0:00:08 - 0.0s - INFO - __main__ - args = Namespace(REG_TYPE_KEYS=['mas', 'ewc'], adam_epsilon=0.0001, add_task_tokens=False, data_dir='data', debug=False, decay_style='linear', device_ids=[1, 2, 3, 4, 5, 6, 7], dynamic_epochs=False, fp32=True, gen_lm_sample_percentage=0.2, learning_rate=6.25e-05, lm_lambda=0.25, logging_steps=1000, lr_schedule='warmup_linear', max_grad_norm=1, max_len=1024, max_n_epochs=9, memory_sizes=[24707.6, 33810.4, 33810.4, 33810.4, 33810.4, 33810.4, 33810.4], min_batch_size=4, min_n_steps=1500, model_dir_root='models/gpt2/finetune/sst_srl_woz.en', model_name='gpt2', n_gpus=7, n_train_epochs={'sst': 3, 'srl': 3, 'woz.en': 3}, n_warmup_ratio=0.005, n_workers=75, qp_margin=0.5, real_sample=False, reg_lambda=1.0, seed=42, seq_train_type='finetune', skip_tasks=None, tasks=['sst', 'srl', 'woz.en'], temperature_lm=1.0, temperature_qa=1.0, test_batch_size=[14330, 19610, 19610, 19610, 19610, 19610, 19610], tokens_weight=5, top_k_lm=20, top_k_qa=20, top_p_lm=0.0, top_p_qa=0.0, train_batch_size=[14330, 19610, 19610, 19610, 19610, 19610, 19610], unbound=0, use_sep=False, weight_decay=0.01)
+2021-12-28 10:29:50,998 - 0:00:08 - 0.0s - INFO - __main__ - start to train { task: ['sst'], seq train type: finetune }
+2021-12-28 10:29:50,998 - 0:00:08 - 0.0s - INFO - __main__ - extra training data size: 0
+2021-12-28 10:29:55,290 - 0:00:13 - 4.3s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+2021-12-28 10:29:58,616 - 0:00:16 - 3.3s - INFO - __main__ - len of train dataset: 6920 , max train batch size 4 , num of opt steps: 20760
+/home/ai20mtech14009/anaconda3/envs/LAMOL/lib/python3.7/site-packages/torch/nn/parallel/_functions.py:64: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+2021-12-28 10:31:07,944 - 0:01:25 - 69.3s - INFO - __main__ - progress 0.578 , lr 5.1E-05 , loss 1.898 , qa loss 1.898 , lm loss 0.000 , avg batch size 4.0
+2021-12-28 10:31:58,510 - 0:02:16 - 50.6s - INFO - __main__ - epoch 1/3 done , tot steps 1730 , lr 4.2E-05 , loss 1.20 , qa loss 1.20 , lm loss 0.00 , avg batch size 4.0
+2021-12-28 10:33:07,050 - 0:03:25 - 68.5s - INFO - __main__ - progress 1.578 , lr 3.0E-05 , loss 0.213 , qa loss 0.213 , lm loss 0.000 , avg batch size 4.0
+2021-12-28 10:33:57,187 - 0:04:15 - 50.1s - INFO - __main__ - epoch 2/3 done , tot steps 3460 , lr 2.1E-05 , loss 0.20 , qa loss 0.20 , lm loss 0.00 , avg batch size 4.0
+2021-12-28 10:35:06,313 - 0:05:24 - 69.1s - INFO - __main__ - progress 2.578 , lr 8.9E-06 , loss 0.191 , qa loss 0.191 , lm loss 0.000 , avg batch size 4.0
+2021-12-28 10:35:55,833 - 0:06:13 - 49.5s - INFO - __main__ - epoch 3/3 done , tot steps 5190 , lr 1.0E-07 , loss 0.19 , qa loss 0.19 , lm loss 0.00 , avg batch size 4.0
+2021-12-28 10:36:00,779 - 0:06:18 - 4.9s - INFO - __main__ - start to train { task: ['srl'], seq train type: finetune }
+2021-12-28 10:36:05,326 - 0:06:23 - 4.5s - INFO - __main__ - extra training data size: 0
+2021-12-28 10:36:05,409 - 0:06:23 - 0.1s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+The current active adapter is Stack[sst]
+The task with which model is saved sst and director is /home/ai20mtech14009/surbhi/Shadab/Final/Three_Epochs_Task_Name_Testing/models/gpt2/finetune/sst_srl_woz.en/sst/model-finish_adapter
+2021-12-28 10:36:08,610 - 0:06:26 - 3.2s - INFO - __main__ - len of train dataset: 6414 , max train batch size 4 , num of opt steps: 19242
+Overwriting existing adapter 'sst'.
+2021-12-28 10:37:38,834 - 0:07:56 - 90.2s - INFO - __main__ - progress 0.624 , lr 5.0E-05 , loss 1.517 , qa loss 1.517 , lm loss 0.000 , avg batch size 4.0
+2021-12-28 10:38:35,454 - 0:08:53 - 56.6s - INFO - __main__ - epoch 1/3 done , tot steps 1604 , lr 4.2E-05 , loss 1.29 , qa loss 1.29 , lm loss 0.00 , avg batch size 4.0
+2021-12-28 10:40:07,617 - 0:10:25 - 92.2s - INFO - __main__ - progress 1.624 , lr 2.9E-05 , loss 0.804 , qa loss 0.804 , lm loss 0.000 , avg batch size 4.0
+2021-12-28 10:41:03,771 - 0:11:21 - 56.2s - INFO - __main__ - epoch 2/3 done , tot steps 3208 , lr 2.1E-05 , loss 0.78 , qa loss 0.78 , lm loss 0.00 , avg batch size 4.0
+2021-12-28 10:42:38,254 - 0:12:56 - 94.5s - INFO - __main__ - progress 2.624 , lr 7.9E-06 , loss 0.694 , qa loss 0.694 , lm loss 0.000 , avg batch size 4.0
+2021-12-28 10:43:33,588 - 0:13:51 - 55.3s - INFO - __main__ - epoch 3/3 done , tot steps 4812 , lr 1.0E-07 , loss 0.70 , qa loss 0.70 , lm loss 0.00 , avg batch size 4.0
+2021-12-28 10:43:38,300 - 0:13:56 - 4.7s - INFO - __main__ - start to train { task: ['woz.en'], seq train type: finetune }
+2021-12-28 10:43:43,032 - 0:14:00 - 4.7s - INFO - __main__ - extra training data size: 0
+2021-12-28 10:43:43,122 - 0:14:01 - 0.1s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+The current active adapter is Stack[sst]
+The task with which model is saved sst and director is /home/ai20mtech14009/surbhi/Shadab/Final/Three_Epochs_Task_Name_Testing/models/gpt2/finetune/sst_srl_woz.en/srl/model-finish_adapter
+2021-12-28 10:43:46,722 - 0:14:04 - 3.6s - INFO - __main__ - len of train dataset: 2536 , max train batch size 4 , num of opt steps: 7608
+Overwriting existing adapter 'sst'.
+2021-12-28 10:44:32,733 - 0:14:50 - 46.0s - INFO - __main__ - epoch 1/3 done , tot steps 634 , lr 4.2E-05 , loss 0.93 , qa loss 0.93 , lm loss 0.00 , avg batch size 4.0
+2021-12-28 10:45:19,538 - 0:15:37 - 46.8s - INFO - __main__ - epoch 2/3 done , tot steps 1268 , lr 2.1E-05 , loss 0.35 , qa loss 0.35 , lm loss 0.00 , avg batch size 4.0
+2021-12-28 10:46:05,033 - 0:16:22 - 45.5s - INFO - __main__ - epoch 3/3 done , tot steps 1902 , lr 9.9E-08 , loss 0.29 , qa loss 0.29 , lm loss 0.00 , avg batch size 4.0
+The current active adapter is Stack[sst]
+The task with which model is saved sst and director is /home/ai20mtech14009/surbhi/Shadab/Final/Three_Epochs_Task_Name_Testing/models/gpt2/finetune/sst_srl_woz.en/woz.en/model-finish_adapter

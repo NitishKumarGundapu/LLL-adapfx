@@ -1,0 +1,13 @@
+2023-07-28 22:56:54,409 - 0:00:06 - 0.0s - INFO - __main__ - args = Namespace(adam_epsilon=0.0001, add_task_tokens=False, data_dir='data', debug=False, decay_style='linear', device_ids=[13], dynamic_epochs=False, fp32=False, gen_lm_sample_percentage=0.2, learning_rate=6.25e-05, lm_lambda=0.2, logging_steps=1000, lr_schedule='warmup_linear', max_grad_norm=1, max_len=1024, max_n_epochs=9, memory_sizes=[32768.0], min_batch_size=4, min_n_steps=1500, model_dir_root='models/gpt2/lll/sst_srl_woz.en_0.2', model_name='gpt2', n_gpus=1, n_train_epochs={'sst': 10, 'srl': 10, 'woz.en': 10}, n_warmup_ratio=0.005, n_workers=35, qp_margin=0.5, real_sample=False, reg_lambda=1.0, seed=42, seq_train_type='lll', skip_tasks=None, tasks=['sst', 'srl', 'woz.en'], temperature_lm=1.0, temperature_qa=1.0, test_batch_size=[16056], tokens_weight=5, top_k_lm=20, top_k_qa=20, top_p_lm=0.0, top_p_qa=0.0, train_batch_size=[16056], unbound=0, use_sep=False, weight_decay=0.01)
+2023-07-28 22:57:11,742 - 0:00:23 - 17.3s - INFO - __main__ - task: sst, epoch: 10
+2023-07-28 22:57:11,743 - 0:00:23 - 0.0s - INFO - __main__ - start to test { task: sst (load) sst (eval), seq train type: lll }
+2023-07-28 22:57:17,202 - 0:00:29 - 5.5s - INFO - __main__ - len of test dataset: 1821
+2023-07-28 22:57:30,126 - 0:00:42 - 12.9s - INFO - __main__ - score: {'sst': OrderedDict([('em', 89.01702361339923), ('nf1', 89.01702361339923), ('nem', 89.01702361339923)]), 'srl': None, 'woz.en': None}
+2023-07-28 22:57:42,449 - 0:00:54 - 12.3s - INFO - __main__ - task: srl, epoch: 10
+2023-07-28 22:57:42,449 - 0:00:54 - 0.0s - INFO - __main__ - start to test { task: srl (load) srl (eval), seq train type: lll }
+2023-07-28 22:57:48,637 - 0:01:00 - 6.2s - INFO - __main__ - len of test dataset: 2201
+2023-07-28 23:27:57,105 - 0:31:09 - 1808.5s - INFO - __main__ - score: {'sst': None, 'srl': OrderedDict([('em', 33.71194911403907), ('nf1', 54.140081507270445), ('nem', 38.618809631985464)]), 'woz.en': None}
+2023-07-28 23:28:09,089 - 0:31:21 - 12.0s - INFO - __main__ - task: woz.en, epoch: 10
+2023-07-28 23:28:09,089 - 0:31:21 - 0.0s - INFO - __main__ - start to test { task: woz.en (load) woz.en (eval), seq train type: lll }
+2023-07-28 23:28:18,012 - 0:31:30 - 8.9s - INFO - __main__ - len of test dataset: 1646
+2023-07-28 23:43:50,395 - 0:47:02 - 932.4s - INFO - __main__ - score: {'sst': None, 'srl': None, 'woz.en': OrderedDict([('em', 15.97812879708384), ('nf1', 91.68447962190372), ('nem', 82.01701093560145), ('joint_goal_em', 76.00243013365736), ('turn_request_em', 90.15795868772783), ('turn_goal_em', 87.60631834750912), ('avg_dialogue', 83.0801944106926)])}

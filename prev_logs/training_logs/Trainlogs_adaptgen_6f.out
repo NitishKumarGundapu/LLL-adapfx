@@ -1,0 +1,32 @@
+2023-06-17 11:21:38,297 - 0:00:07 - 0.0s - INFO - __main__ - args = Namespace(REG_TYPE_KEYS=['mas', 'ewc'], adam_epsilon=0.0001, add_task_tokens=False, data_dir='data', debug=False, decay_style='linear', device_ids=[0, 1], dynamic_epochs=False, fp32=True, gen_lm_sample_percentage=0.2, learning_rate=6.25e-05, lm_lambda=0.2, logging_steps=1000, lr_schedule='warmup_linear', max_grad_norm=1, max_len=1024, max_n_epochs=9, memory_sizes=[31457.28, 34078.72], min_batch_size=4, min_n_steps=1500, model_dir_root='model_6f/gpt2/lll/wikisql_ag_amazon_sst_srl_woz.en_0.2', model_name='gpt2', n_gpus=2, n_train_epochs={'wikisql': 10, 'ag': 10, 'amazon': 10, 'sst': 10, 'srl': 10, 'woz.en': 10}, n_warmup_ratio=0.005, n_workers=75, qp_margin=0.5, real_sample=False, reg_lambda=1.0, seed=42, seq_train_type='lll', skip_tasks=None, tasks=['wikisql', 'ag', 'amazon', 'sst', 'srl', 'woz.en'], temperature_lm=1.0, temperature_qa=1.0, test_batch_size=[11010, 11927], tokens_weight=5, top_k_lm=20, top_k_qa=20, top_p_lm=0.0, top_p_qa=0.0, train_batch_size=[11010, 11927], unbound=0, use_sep=False, weight_decay=0.01)
+2023-06-17 11:21:38,297 - 0:00:07 - 0.0s - INFO - __main__ - start to train { task: ['wikisql'], seq train type: lll }
+2023-06-17 11:21:38,297 - 0:00:07 - 0.0s - INFO - __main__ - extra training data size: 0
+2023-06-17 11:21:41,489 - 0:00:10 - 3.2s - INFO - __main__ - gen token = __gen__ , gen token id = 50260
+[0]
+2023-06-17 11:28:51,797 - 0:07:20 - 430.3s - INFO - __main__ - len of train dataset: 56355 , max train batch size 37 , num of opt steps: 563550
+/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+Traceback (most recent call last):
+  File "train_adapter_gen_mam_config.py", line 295, in <module>
+    model = train([task_id], model, train_type=0)
+  File "train_adapter_gen_mam_config.py", line 225, in train
+    losses = get_losses(parallel_model, cqa, Y, gen_X, gen_Y, train_loss_fct)
+  File "/raid/amana/Lamol_with_adaptergen/utils.py", line 50, in get_losses
+    lm_loss = loss_fct([torch.transpose(l, 1, 2) for l in lm_logits], gen_Y)
+  File "/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/raid/amana/Lamol_with_adaptergen/parallel.py", line 37, in forward
+    outputs = _criterion_parallel_apply(replicas, inputs, targets, kwargs)
+  File "/raid/amana/Lamol_with_adaptergen/parallel.py", line 95, in _criterion_parallel_apply
+    raise output
+  File "/raid/amana/Lamol_with_adaptergen/parallel.py", line 70, in _worker
+    output = module(*(input + target), **kwargs)
+  File "/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/modules/loss.py", line 1174, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/raid/amana/miniconda3/envs/lamol/lib/python3.8/site-packages/torch/nn/functional.py", line 3029, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 878.00 MiB (GPU 0; 31.75 GiB total capacity; 16.00 GiB already allocated; 100.44 MiB free; 18.41 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
