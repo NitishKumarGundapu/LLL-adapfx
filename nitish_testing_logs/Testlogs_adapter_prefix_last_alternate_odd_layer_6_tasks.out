@@ -1,0 +1,14 @@
+2023-07-31 12:16:15,665 - 0:00:07 - 0.0s - INFO - __main__ - args = Namespace(adam_epsilon=0.0001, add_task_tokens=False, data_dir='data', debug=False, decay_style='linear', device_ids=[12], dynamic_epochs=False, fp32=False, gen_lm_sample_percentage=0.2, learning_rate=6.25e-05, lm_lambda=0.2, logging_steps=1000, lr_schedule='warmup_linear', max_grad_norm=1, max_len=1024, max_n_epochs=9, memory_sizes=[32768.0], min_batch_size=4, min_n_steps=1500, model_dir_root='models/gpt2/lll/wikisql_ag_amazon_sst_srl_woz.en_0.2', model_name='gpt2', n_gpus=1, n_train_epochs={'wikisql': 10, 'ag': 10, 'amazon': 10, 'sst': 10, 'srl': 10, 'woz.en': 10}, n_warmup_ratio=0.005, n_workers=35, qp_margin=0.5, real_sample=False, reg_lambda=1.0, seed=42, seq_train_type='lll', skip_tasks=None, tasks=['wikisql', 'ag', 'amazon', 'sst', 'srl', 'woz.en'], temperature_lm=1.0, temperature_qa=1.0, test_batch_size=[16056], tokens_weight=5, top_k_lm=20, top_k_qa=20, top_p_lm=0.0, top_p_qa=0.0, train_batch_size=[16056], unbound=0, use_sep=False, weight_decay=0.01)
+2023-07-31 12:16:34,024 - 0:00:25 - 18.4s - INFO - __main__ - task: wikisql, epoch: 10
+2023-07-31 12:16:34,025 - 0:00:25 - 0.0s - INFO - __main__ - start to test { task: wikisql (load) wikisql (eval), seq train type: lll }
+2023-07-31 12:20:23,332 - 0:04:14 - 229.3s - INFO - __main__ - len of test dataset: 15878
+Traceback (most recent call last):
+  File "test_adapter_from_scratch.py", line 168, in <module>
+    test_one_to_many(task_load)
+  File "test_adapter_from_scratch.py", line 137, in test_one_to_many
+    test_one_to_one(task_load, task_load, model, score_dict,test_run)
+  File "test_adapter_from_scratch.py", line 59, in test_one_to_one
+    sample_sequence(model, need_process, qa_results, all_pasts, max_tot_lens,test_run)
+  File "/raid/amana/Lamol_with_adaptergen/utils.py", line 577, in sample_sequence
+    gc.collect()
+KeyboardInterrupt

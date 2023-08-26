@@ -32,6 +32,15 @@ nohup python test_adapter_from_scratch.py --data_dir data --model_dir_root model
 nohup python train_adapter_gen_mam_config_2.py --data_dir data --model_dir_root models --seq_train_type lll --model_name gpt2 --n_gpus 12 --n_workers 75 --fp32 --n_train_epochs 10 --gen_lm_sample_percentage 0.1 --tasks sst srl woz.en --lm_lambda 0.2 > /raid/amana/Lamol_with_adaptergen/nitish_training_logs/Trainlogs_adaptgen_3_og_mam_config.out
 '''
 
+'''
+
+adapter_config = ConfigUnion(
+                            PfeifferConfig(mh_adapter=True, output_adapter=False, reduction_factor=args.rf, non_linearity="relu",leave_out = args.leaveout),
+                            PfeifferConfig(mh_adapter=False, output_adapter=True, reduction_factor=args.rf, non_linearity="relu",leave_out = args.leaveout)
+                        )
+
+'''
+
 
 import torch
 import time
@@ -42,6 +51,7 @@ from transformers import AdamW, WEIGHTS_NAME, get_linear_schedule_with_warmup
 import csv 
 import numpy as np
 import os
+import random
 import logging
 from fp16 import FP16_Module, FP16_Optimizer
 from parallel import DataParallelModel, DataParallelCriterion
@@ -54,6 +64,19 @@ from regularizers import REG_TYPES, REG_TYPE_KEYS, Weight_Regularized_AdamW, Wei
 from torch.nn import CrossEntropyLoss
 from transformers.adapters import ConfigUnion, AdapterConfig, PrefixTuningConfig
 logger = logging.getLogger(__name__)
+
+
+# def set_seed(seed: int = 42) -> None:
+#     np.random.seed(seed)
+#     random.seed(seed)
+#     torch.manual_seed(seed)
+#     torch.cuda.manual_seed(seed)
+#     # When running on the CuDNN backend, two further options must be set
+#     torch.backends.cudnn.deterministic = True
+#     torch.backends.cudnn.benchmark = False
+#     # Set a fixed value for the hash seed
+#     os.environ["PYTHONHASHSEED"] = str(seed)
+#     print(f"Random seed set as {seed}")
 
 
 def train(task_ids, model,train_type=0):
@@ -102,15 +125,21 @@ def train(task_ids, model,train_type=0):
     
     if task_ids[0]>0 and train_type==1:
         adapter_name = args.tasks[task_ids[0]].replace(".", "_")
-        # adapter_config = ConfigUnion(
-        #                     PrefixTuningConfig(cross_prefix=True, prefix_length=50, bottleneck_size=600,non_linearity='tanh',leave_out=[1,3,5,7,9,11]),
-        #                     AdapterConfig(mh_adapter=False, output_adapter=True, reduction_factor=3.5, non_linearity="tanh", init_weights="mam_adapter", leave_out=[1,3,5,7,9,11]),
-        #                 )adapter_config = ConfigUnion(
-        adapter_config = ConfigUnion(
-                            PrefixTuningConfig(cross_prefix=True, prefix_length=30, bottleneck_size=800,non_linearity='relu',leave_out=[4,5,6,7,8,9,10,11]),
-                            AdapterConfig(mh_adapter=False, output_adapter=True, reduction_factor=4, non_linearity="relu", init_weights="mam_adapter", leave_out=[4,5,6,7,8,9,10,11]),
+        if args.flat == False:
+            adapter_config = ConfigUnion(
+                            PrefixTuningConfig(cross_prefix=True, prefix_length=args.prefixlength, bottleneck_size=args.bottle_neck_size,non_linearity='relu',leave_out=args.leaveout),
+                            AdapterConfig(mh_adapter=False, output_adapter=True, reduction_factor=args.rf, non_linearity="relu", init_weights="mam_adapter", leave_out=args.leaveout),
                         )
+        else:
+            adapter_config = ConfigUnion(
+                            PrefixTuningConfig(cross_prefix=True, prefix_length=args.prefixlength, flat = True,non_linearity='relu',leave_out=args.leaveout),
+                            AdapterConfig(mh_adapter=False, output_adapter=True, reduction_factor=args.rf, non_linearity="relu", init_weights="mam_adapter", leave_out=args.leaveout),
+                        )
+        # adapter_config = ConfigUnion(
+        #                     AdapterConfig(mh_adapter=True, output_adapter=True, reduction_factor=args.rf, non_linearity="relu", init_weights="mam_adapter", leave_out=args.leaveout)
+        #                 )
         model.add_adapter(adapter_name, config=adapter_config)
+        print(model.adapter_summary())
         model.set_active_adapters(adapter_name)
         model = model.to(args.device_ids[0])
         model.train_adapter(adapter_name)
@@ -182,12 +211,23 @@ def train(task_ids, model,train_type=0):
         #                     PrefixTuningConfig(cross_prefix=True, prefix_length=30, bottleneck_size=800,non_linearity='relu',leave_out=[1,3,5,7,9,11]),
         #                     AdapterConfig(mh_adapter=False, output_adapter=True, reduction_factor=4, non_linearity="relu", init_weights="mam_adapter", leave_out=[1,3,5,7,9,11]),
         #                 )
-        adapter_config = ConfigUnion(
-                            PrefixTuningConfig(cross_prefix=True, prefix_length=30, bottleneck_size=800,non_linearity='relu',leave_out=[4,5,6,7,8,9,10,11]),
-                            AdapterConfig(mh_adapter=False, output_adapter=True, reduction_factor=4, non_linearity="relu", init_weights="mam_adapter", leave_out=[4,5,6,7,8,9,10,11]),
+        if args.flat == False:
+            adapter_config = ConfigUnion(
+                            PrefixTuningConfig(cross_prefix=True, prefix_length=args.prefixlength, bottleneck_size=args.bottle_neck_size,non_linearity='relu',leave_out=args.leaveout),
+                            AdapterConfig(mh_adapter=False, output_adapter=True, reduction_factor=args.rf, non_linearity="relu", init_weights="mam_adapter", leave_out=args.leaveout),
+                        )
+        else:
+            adapter_config = ConfigUnion(
+                            PrefixTuningConfig(cross_prefix=True, prefix_length=args.prefixlength, flat = True,non_linearity='relu',leave_out=args.leaveout),
+                            AdapterConfig(mh_adapter=False, output_adapter=True, reduction_factor=args.rf, non_linearity="relu", init_weights="mam_adapter", leave_out=args.leaveout),
                         )
         
+        # adapter_config = ConfigUnion(
+        #                     AdapterConfig(mh_adapter=True, output_adapter=True, reduction_factor=args.rf, non_linearity="relu", init_weights="mam_adapter", leave_out=args.leaveout)
+        #                 )
+        
         model.add_adapter(tasks[0], config=adapter_config)
+        print(model.adapter_summary())
         model.set_active_adapters(tasks[0])
         model.train_adapter(tasks[0])
         model = model.to(args.device_ids[0])
@@ -293,6 +333,7 @@ def train(task_ids, model,train_type=0):
 
 if __name__ == '__main__':
     # get the start time
+    # set_seed()
     st = time.time()
     st_cpu = time.process_time()
     if not args.debug:
@@ -303,7 +344,18 @@ if __name__ == '__main__':
 
     init_logging(os.path.join(args.model_dir_root, 'log_train.txt'))
     logger.info('args = {}'.format(str(args)))
+    
+    if args.leaveout != "":
+        args.leaveout = [int(a) for a in args.leaveout.split(",")]
+    else:
+        args.leaveout = []
 
+    print(f"\nThe Prefix length is : {args.prefixlength}")
+    print(f"The Reduction Facotr is : {args.rf}")
+    print(f"The Bottleneck size is : {args.bottle_neck_size}")
+    print(f"The leaving layers are : {args.leaveout}")
+    print(f"The Flat  : {args.flat}\n")
+    
     model = None
     if args.seq_train_type == "multitask":
         model = train(list(range(len(args.tasks))), model)

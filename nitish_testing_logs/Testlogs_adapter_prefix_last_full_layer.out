@@ -2,7 +2,7 @@
 2023-07-29 11:42:23,859 - 0:00:21 - 16.2s - INFO - __main__ - task: sst, epoch: 10
 2023-07-29 11:42:23,860 - 0:00:21 - 0.0s - INFO - __main__ - start to test { task: sst (load) sst (eval), seq train type: lll }
 2023-07-29 11:42:28,591 - 0:00:26 - 4.7s - INFO - __main__ - len of test dataset: 1821
-2023-07-29 11:42:39,003 - 0:00:36 - 10.4s - INFO - __main__ - score: {'sst': OrderedDict([('em', 88.5777045579352), ('nf1', 88.5777045579352), ('nem', 88.5777045579352)]), 'srl': None, 'woz.en': None}
+2023-07-29 11:42:39,003 - 0:00:36 - 10.4s - INFO - __main__ - score: {'sst': OrderedDict([('em', 89.5777045579352), ('nf1', 89.5777045579352), ('nem', 89.5777045579352)]), 'srl': None, 'woz.en': None}
 2023-07-29 11:42:51,522 - 0:00:49 - 12.5s - INFO - __main__ - task: srl, epoch: 10
 2023-07-29 11:42:51,522 - 0:00:49 - 0.0s - INFO - __main__ - start to test { task: srl (load) srl (eval), seq train type: lll }
 2023-07-29 11:42:56,912 - 0:00:54 - 5.4s - INFO - __main__ - len of test dataset: 2201

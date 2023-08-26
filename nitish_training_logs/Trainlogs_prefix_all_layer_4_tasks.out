@@ -1,0 +1,11 @@
+No available GPUs!
+Traceback (most recent call last):
+  File "train_adapter_prefix_config_1.py", line 49, in <module>
+    from utils import *
+  File "/raid/amana/Lamol_with_adaptergen/utils.py", line 17, in <module>
+    from settings import args, TASK_DICT, SPECIAL_TOKENS, SPECIAL_TOKEN_IDS, FILL_VAL
+  File "/raid/amana/Lamol_with_adaptergen/settings.py", line 183, in <module>
+    args, MODEL_CONFIG, MODEL_CLASS, TOKENIZER, CONFIG_CLASS, SPECIAL_TOKEN_IDS, SPECIAL_TOKENS, DATA_ATTRS, TOKENS_WEIGHT = parse_args()
+  File "/raid/amana/Lamol_with_adaptergen/settings.py", line 91, in parse_args
+    raise NotImplementedError("No CPU mode available!")
+NotImplementedError: No CPU mode available!
